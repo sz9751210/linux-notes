@@ -34,4 +34,41 @@ cat [-AbeEnstTuv] [--help] [--version] fileName
 ```shell
 cat test1
 ```
-2. 
+2. 查看檔案並顯示行號
+
+假設有個檔案test2長這樣
+```
+test1
+
+
+test2
+```
+
+```shell
+cat -n test2
+
+# ountput
+    1 test1
+    2
+    3 
+    4 test2
+```
+如果要對空白行取消編號的話可改用-b選項
+```shell
+cat -b test2
+
+# ountput
+    1 test1
+
+
+    2 test2
+```
+如果要把一行以上的空白行合併為一行可使用-s選項
+```shell
+cat -s test2
+
+# output
+aaa
+
+bbb
+```

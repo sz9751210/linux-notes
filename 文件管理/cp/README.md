@@ -84,3 +84,7 @@ cp *.log dest
 
 ## 參考資料
 http://manpages.ubuntu.com/manpages/bionic/zh_TW/man1/cp.1.html
+
+http://www.link.idv.tw/linux_command_file/Linux_cp_command.htm
+
+https://linuxhint.com/cp-command-linux/

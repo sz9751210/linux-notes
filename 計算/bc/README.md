@@ -52,6 +52,7 @@ echo $ans
 * https://man.linuxde.net/bc
 * https://blog.gtwang.org/linux/linux-bc-command-tutorial-examples/
 * https://www.runoob.com/linux/linux-comm-bc.html
+* https://www.cnblogs.com/machangwei-8/p/10388510.html
 ## 相關指令
 * calc
 * gcalccmd

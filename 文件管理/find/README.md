@@ -30,6 +30,7 @@ find path [OPTIONS]
 | -user                   | 指定檔案擁有者                                                         |
 | -group                  | 指定檔案的群組                                                         |
 ## 基本操作
+
 1. 指定檔名搜尋
 ```shell
 # 搜尋在當前目錄底下，檔名為file.txt的檔案
@@ -41,6 +42,7 @@ find . -name "*.txt"
 # 使用絕對路徑不分大小寫搜尋檔案
 find /home -iname file.txt
 ```
+
 2. 指定檔案修改與存取時間搜尋
 ```shell
 # 搜尋當前目錄下過去5天內檔案狀態有被存取過的檔案
@@ -49,12 +51,13 @@ find . -atime -5
 # 搜尋當前目錄下過去5分鐘檔案狀態有被修改過的檔案
 find . -cmin -5
 
-# 搜尋當前目錄下過去5天檔案內容有被修改過的檔案
-find . -mtime -5
+# 搜尋當前目錄下，上次修改時間是在5天以上、10天以下的檔案
+find . -mtime +5 -mtime -10
 ``` 
 > * atime（Accesstime）指的是文件最後一次被訪問的時間；
 > * mtime（Modifytime）指的是文件內容被修改的時間，但不包括權限的修改，比如用vim編輯器修改內容；
 > * ctime（Changetime）指的是文件的權限、擁有者、所屬組及鏈接數發上改變的時間。
+
 3. 指定檔案類型搜尋
 ```shell
 # 搜尋當前目錄及子目錄下，類型為文件
@@ -70,6 +73,7 @@ find . -type d
 > * f: 一般的檔案
 > * l: 連結檔，如果與 -L 或 -follow 參數同時使用時，就只會搜尋到有問題的連結檔，如果想要與 -L 同時使用，請改用 -xtype
 > * s: socket 檔案
+
 4. 指定檔案權限搜尋
 ```shell
 # 搜尋當前目錄下權限為777的檔案
@@ -87,6 +91,7 @@ find . -type f -perm /u=r
 > * 如果不帶有任何前綴，則只有完全符合的檔案才會成功匹配
 > * 如果帶有`-`，則代表同時符合，任何一類用戶（ugo）的權限中的每一位（rwx）都要同時符合mode所表示的條件，9位權限之間存在“與”關係。
 > * 如果帶有`/`，則代表至少符合，任何一類用戶（ugo）的權限中的任何一位（rwx）符合mode所表示的條件即可，9位權限之間存在“或”關係。
+
 5. 指定檔案屬性搜尋
 ```shell
 # 搜尋當前目錄下，user為root的檔案
@@ -95,6 +100,7 @@ find . -user root
 # 搜尋當前目錄下，group為root的檔案
 find . -group root
 ```
+
 6. 指定檔案大小搜尋
 ```shell
 # 搜尋當前目錄下，檔案大小剛好是50MB的檔案
@@ -107,9 +113,30 @@ find . -size +50M -size -100M
 find . -size +100M -exec rm -rf {} \;
 ```
 
+7. 指定搜尋空檔案與隱藏檔案
+```shell
+# 搜尋當前目錄下的空目錄
+find . -type d -empty
+
+# 搜尋當前目錄下的隱藏檔案
+find . -type f -name ".*"
+
+```
+
+8. 實用範例
+```shell
+# 搜尋當前目錄下，檔案大小在10MB以上的log檔，並將其刪除
+find . -type f -name *.log -size +10M -exec rm {} \;
+
+# 搜尋當前目錄下所有的php檔案，並找尋有關鍵字ok以及匹配處的以下5行
+find ./ -name \*.php -exec grep -wnHA5 ok {} \;
+```
+
+
 ## 參考資料
 * [man find](https://man7.org/linux/man-pages/man1/find.1.html)
 * [SGID](http://linux.vbird.org/linux_basic/0220filemanager.php#sgid)
 * [Unix/Linux 的 find 指令使用教學、技巧與範例整理](https://blog.gtwang.org/linux/unix-linux-find-command-examples/)
 * [根据文件属性或权限进行find查找](https://blog.51cto.com/yttitan/1935023)
+* [使用 Linux find 尋找檔案/尋找資料夾](https://shengyu7697.github.io/linux-find/)
 

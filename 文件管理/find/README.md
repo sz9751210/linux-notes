@@ -29,6 +29,7 @@ find path [OPTIONS]
 | -perm                   | 指定檔案的權限                                                         |
 | -user                   | 指定檔案擁有者                                                         |
 | -group                  | 指定檔案的群組                                                         |
+| -exec                   | 對使用find的搜尋結果執行特定指令                                       |
 ## 基本操作
 
 1. 指定檔名搜尋
@@ -131,7 +132,7 @@ find . -type f -name *.log -size +10M -exec rm {} \;
 # 搜尋當前目錄下所有的php檔案，並找尋有關鍵字ok以及匹配處的以下5行
 find ./ -name \*.php -exec grep -wnHA5 ok {} \;
 ```
-
+>在 -exec 前面是 find 指令找出想要的檔案，在 -exec 後面的 command 是要執行的指令, 而 { } 包著的是找到的檔案或目錄，後面需要加上 \; 完結。
 
 ## 參考資料
 * [man find](https://man7.org/linux/man-pages/man1/find.1.html)
@@ -139,4 +140,4 @@ find ./ -name \*.php -exec grep -wnHA5 ok {} \;
 * [Unix/Linux 的 find 指令使用教學、技巧與範例整理](https://blog.gtwang.org/linux/unix-linux-find-command-examples/)
 * [根据文件属性或权限进行find查找](https://blog.51cto.com/yttitan/1935023)
 * [使用 Linux find 尋找檔案/尋找資料夾](https://shengyu7697.github.io/linux-find/)
-
+* [Linux find 指令的 exec 參數](https://www.opencli.com/linux/linux-find-command-exec-options)

@@ -65,9 +65,67 @@ grep [-abcEFGhHilLnqrsvVwxy][-A<顯示行數>][-B<顯示列數>][-C<顯示列數
 | -u, --unix-byte-offsets        | 使用標誌高亮匹配字串                                                                                                                                                      |
 
 ## 基本操作
+1. 指定文件查詢關鍵字
+```shell 
+# 在file這個文件裡尋找test關鍵字
+grep test file
+```
+2. 透過匹配方式搜尋
+```shell
+# 在/etc/目錄下所有.conf檔搜尋linux關鍵字
+grep  linux /etc/*.conf
+```
+3. 不分大小寫搜尋
+```shell
+# 在當前目錄底下搜尋linux關鍵字
+grep -i linux .
+```
+
+4. 反向匹配
+```shell
+# 在當前目錄下，顯示不包含linux的行
+grep -v linux .
+```
+
+5. 顯示行號
+```shell
+grep -n linux .
+```
+
+6. 遞迴搜尋檔案
+```shell
+# 在當前目錄及其子目錄下，搜尋linux關鍵字
+grep -r linux .
+
+# 在當前目錄及其子目錄下，並且檔名為log結尾的文件，搜尋linux關鍵字
+grep -r --include="*.log" linux .
+```
+
+7. 不顯示錯誤訊息
+```shell
+grep linux . 2>/dev/null
+```
+
+8. 顯示前後幾行
+```shell
+# 多顯示後一行
+grep -A 1 linux .
+
+# 多顯示前一行
+grep -B 1 linux .
+
+# 多顯示前後各一行
+grep -C 1 linux .
+```
+
+9. 實用範例
+```shell
+# 依照時間排序並計算哪個時間log數量最多
+grep -oP '2021:[0-2][0-9]:[0-5][0-9]'| sort  |  uniq -c
+```
+
 
 ## 參考資料
 * http://linux.51yip.com/search/grep
 * https://man7.org/linux/man-pages/man1/grep.1.html
-* 
-## 相關指令(可選)
+* https://blog.gtwang.org/linux/linux-grep-command-tutorial-examples/

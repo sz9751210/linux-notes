@@ -90,6 +90,25 @@ ps [OPTIONS]
 | TIME     | 執行的時間           |
 | COMMAND  | 執行的指令           |
 
+ps工具標識進程的5種狀態碼: 
+| 狀態碼 | 說明 |
+| ---- | ---- |
+|   D   |  不可中斷 uninterruptible sleep (usually IO)     |
+|  R    |  運行 runnable (on run queue)     |
+|   S   |   中斷 sleeping    |
+|  T    |  停止 traced or stopped     |
+|  Z    | 僵死 a defunct (」zombie」) process      |
+|      |      |
+|      |      |
+|      |      |
+
+>linux上進程有5種狀態: 
+>1. 運行(正在運行或在運行隊列中等待) 
+>2. 中斷(休眠中, 受阻, 在等待某個條件的形成或接受到信號) 
+>3. 不可中斷(收到信號不喚醒和不可運行, 進程必須等待直到有中斷髮生) 
+>4. 僵死(進程已終止, 但進程描述符存在, 直到父進程調用wait4()系統調用後釋放) 
+>5. 停止(進程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信號後停止運行運行) 
+
 ## 基本操作
 1. 顯示所有進程信息
 ```shell

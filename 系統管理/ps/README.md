@@ -76,11 +76,85 @@ ps [OPTIONS]
 | -y                 | 配合參數`-l`使用時，不顯示F(flag)欄位，並以RSS欄位取代ADDR欄位             |
 | -w, w              | 採用寬闊的格式來顯示進程狀況                                               |
 
+| 輸出格式 | 說明                 |
+| -------- | -------------------- |
+| USER     | 行程擁有者           |
+| PID      | pid                  |
+| %CPU     | 佔用的CPU使用率      |
+| %MEM     | 佔用的MEM使用率      |
+| VSZ      | 佔用的虛擬記憶體大小 |
+| RSS      | 佔用的記憶體大小     |
+| TTY      | 終端的次要裝置號碼   |
+| STAT     | 該行程的狀態         |
+| START    | 行程開始的時間       |
+| TIME     | 執行的時間           |
+| COMMAND  | 執行的指令           |
+
 ## 基本操作
+1. 顯示所有進程信息
+```shell
+ps -A or ps -e
+
+# 如果要帶命令行 可再添加-f參數
+ps -ef
+```
+
+2. 不區分終端，顯示所有用戶的所有進程
+```shell
+ps aux
+```
+
+
+3. 顯示指定用戶訊息
+```shell
+# 查看root用戶的進程信息
+ps -u root
+```
+
+4. 查找特定進程
+```shell
+# 查找ssh進程
+ps -ef | grep ssh
+```
+
+5. 依據輸出欄位做排序
+```shell
+# 依據CPU使用率列出前五名
+ps aux --sort -pcpu | head -5 or ps au --sort -pcpu | head -5
+
+# 依據MEM使用率列出前五名
+ps aux --sort -pmem | head -5 or ps au --sort -pmem | head -5
+```
+> 透過[-,+]pcpu,pmem等欄位來實現降序或是升序
+
+6. 自定義輸出格式
+```shell
+# 依照cpu使用率升序排序指定欄位
+ps axo pid,comm,pcpu --sort +cpu
+```
+
+7. 重新定義欄位名稱
+```shell
+ps -e -o pid,uname=USERNAME,pcpu=CPU_USAGE,pmem,comm
+```
+
+8. 查看進程並按內存使用大小排序
+```shell
+ps -e -o "%C : %p :%z : %a"|sort -k5 -nr
+```
+
+9. 用樹狀的風格顯示進程的層次關係
+```shell
+ps auf
+```
 
 ## 參考資料
 * http://shutdown2110.blogspot.com/2018/07/linux-ps-top-cpu.html
 * https://www.wongwonggoods.com/linux/linux_useful_command/linux-grep-pgrep-pid/
+* https://www.networkworld.com/article/3596800/how-to-sort-ps-output.html
+* http://linux.51yip.com/search/ps
+* https://www.geeksforgeeks.org/ps-command-in-linux-with-examples/
+* https://kknews.cc/zh-tw/code/4pnr3o2.html
 ## 相關指令
 * top
 * kill

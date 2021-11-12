@@ -139,3 +139,4 @@ s/regexp/replacement/[flags]
 * https://www.runoob.com/linux/linux-comm-sed.html
 * https://iter01.com/458869.html
 * https://terryl.in/zh/linux-sed-command/
+* https://shengyu7697.github.io/linux-sed/

@@ -99,6 +99,80 @@ logrotate [OPTIONS] config_file
 | yearly                    | 日誌文件將按年輪循                                                                                                                                             |
 
 ## 基本操作
+1. 調用/etc/logrotate.d下配置的所有日誌
+```shell
+logrotate /etc/logrotate.conf
+```
+
+2. 指定logrotate檔
+```shell
+logrotate /etc/logrotate.d/logrotate_file
+```
+
+3. 使用debug模式進行故障排除
+```shell
+logrotate -d /etc/logrotate.d/logrotate_file
+```
+
+4. 強制rotate
+```shell
+logrotate -df /etc/logrotate.d/logrotate_file
+```
+
+5. 顯示rotate過程
+```shell
+logrotate -v /etc/logrotate.d/logrotate_file
+```
+
+## 配置文件案例
+
+1. syslog
+```shell
+/var/log/cron
+/var/log/maillog
+/var/log/messages
+/var/log/secure
+/var/log/spooler
+{
+    missingok
+    sharedscripts
+    postrotate
+	/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true
+    endscript
+}
+```
+
+2. jenkins
+```shell
+/var/log/jenkins/jenkins.log /var/log/jenkins/access_log {
+    compress
+    dateext
+    maxage 365
+    rotate 99
+    size=+4096k
+    notifempty
+    missingok
+    create 644
+    copytruncate
+}
+```
+
+3. nginx
+```shell
+/var/log/nginx/*.log /var/log/nginx/*/*.log{
+	daily
+	missingok
+	rotate 14
+	compress
+	delaycompress
+	notifempty
+	create 640 root adm
+	sharedscripts
+	postrotate
+		[ ! -f /var/run/nginx.pid ] || kill -USR1 `cat /var/run/nginx.pid`
+	endscript
+}
+```
 
 ## 參考資料
 * https://wsgzao.github.io/post/logrotate/
@@ -107,4 +181,5 @@ logrotate [OPTIONS] config_file
 * https://www.linode.com/docs/guides/use-logrotate-to-manage-log-files/
 * https://linux.cn/article-4126-1.html
 * https://blog.51cto.com/luweiv998/2354160
+* https://shazi.info/logrotate-%E5%9B%A0%E7%82%BA%E7%88%B6%E7%9B%AE%E9%8C%84%E6%AC%8A%E9%99%90%E8%80%8C%E5%9F%B7%E8%A1%8C%E5%A4%B1%E6%95%97/
 ## 相關指令(可選)

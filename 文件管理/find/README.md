@@ -131,6 +131,9 @@ find . -type f -name *.log -size +10M -exec rm {} \;
 
 # 搜尋當前目錄下所有的php檔案，並找尋有關鍵字ok以及匹配處的以下5行
 find ./ -name \*.php -exec grep -wnHA5 ok {} \;
+
+# 搜尋當前目錄下所有檔案，並找出有network關鍵字的檔案
+find . -name "*" | xargs grep "network"
 ```
 >在 -exec 前面是 find 指令找出想要的檔案，在 -exec 後面的 command 是要執行的指令, 而 { } 包著的是找到的檔案或目錄，後面需要加上 \; 完結。
 

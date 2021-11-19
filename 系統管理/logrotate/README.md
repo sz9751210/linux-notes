@@ -175,11 +175,11 @@ logrotate -v /etc/logrotate.d/logrotate_file
 ```
 
 ## 參考資料
-* https://wsgzao.github.io/post/logrotate/
-* https://linux.die.net/man/8/logrotate
-* http://www.lightxue.com/how-logrotate-works
-* https://www.linode.com/docs/guides/use-logrotate-to-manage-log-files/
-* https://linux.cn/article-4126-1.html
-* https://blog.51cto.com/luweiv998/2354160
-* https://shazi.info/logrotate-%E5%9B%A0%E7%82%BA%E7%88%B6%E7%9B%AE%E9%8C%84%E6%AC%8A%E9%99%90%E8%80%8C%E5%9F%B7%E8%A1%8C%E5%A4%B1%E6%95%97/
+* [Linux 日志切割神器 logrotate 原理介绍和配置详解 | HelloDog (wsgzao.github.io)](https://wsgzao.github.io/post/logrotate/)
+* [logrotate(8) - Linux man page (die.net)](https://linux.die.net/man/8/logrotate)
+* [logrotate机制和原理 — 0xFEE1C001 (lightxue.com)](http://www.lightxue.com/how-logrotate-works)
+* [How to Use logrotate to Manage Log Files | Linode](https://www.linode.com/docs/guides/use-logrotate-to-manage-log-files/)
+* [系统运维|Linux日志文件总管——logrotate](https://linux.cn/article-4126-1.html)
+* [系统运维|Linux日志文件总管——logrotate (51cto.com)](https://blog.51cto.com/luweiv998/2354160)
+* [Logrotate 因為父目錄權限而執行失敗 – Mr. 沙先生 (shazi.info)](https://shazi.info/logrotate-因為父目錄權限而執行失敗/)
 ## 相關指令(可選)

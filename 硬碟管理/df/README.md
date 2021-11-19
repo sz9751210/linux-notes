@@ -92,7 +92,7 @@ df --sync
 df -l
 ```
 ## 參考資料
-* https://www.geeksforgeeks.org/df-command-in-linux-with-examples/
-* https://blog.gtwang.org/linux/linux-df-command-check-disk-space-usage-tutorial-script-example/
+* [df Command in Linux with examples - GeeksforGeeks](https://www.geeksforgeeks.org/df-command-in-linux-with-examples/)
+* [Linux 檢查硬碟使用量 df 指令教學與指令稿範例 - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/linux-df-command-check-disk-space-usage-tutorial-script-example/)
 ## 相關指令(可選)
 * du

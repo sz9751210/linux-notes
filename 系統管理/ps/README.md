@@ -168,12 +168,12 @@ ps auf
 ```
 
 ## 參考資料
-* http://shutdown2110.blogspot.com/2018/07/linux-ps-top-cpu.html
-* https://www.wongwonggoods.com/linux/linux_useful_command/linux-grep-pgrep-pid/
-* https://www.networkworld.com/article/3596800/how-to-sort-ps-output.html
-* http://linux.51yip.com/search/ps
-* https://www.geeksforgeeks.org/ps-command-in-linux-with-examples/
-* https://kknews.cc/zh-tw/code/4pnr3o2.html
+* [Note: Linux 用 ps 與 top 指令找出最耗費 CPU 與記憶體資源的程式 (shutdown2110.blogspot.com)](http://shutdown2110.blogspot.com/2018/07/linux-ps-top-cpu.html)
+* [【Linux】linux, ubuntu 使用 ps, grep, pgrep 找到程式碼的 相關資訊 與 pid (ps aux, ps -ef) (wongwonggoods.com)](https://www.wongwonggoods.com/linux/linux_useful_command/linux-grep-pgrep-pid/)
+* [How to sort ps output | Network World](https://www.networkworld.com/article/3596800/how-to-sort-ps-output.html)
+* [ps linux 命令 在线中文手册 (51yip.com)](http://linux.51yip.com/search/ps)
+* [ps command in Linux with Examples - GeeksforGeeks](https://www.geeksforgeeks.org/ps-command-in-linux-with-examples/)
+* [最全的Linux進程監視命令ps的30個常用例子 - 每日頭條 (kknews.cc)](https://kknews.cc/zh-tw/code/4pnr3o2.html)
 ## 相關指令
 * top
 * kill

@@ -217,9 +217,9 @@ y
 ```
 
 ## 參考資料
-* https://www.runoob.com/linux/linux-comm-top.html
-* http://www.j4.com.tw/web-design/linux-top-%E5%8F%83%E6%95%B8%E5%8F%8A%E6%8C%87%E4%BB%A4%E7%AD%86%E8%A8%98/
-* https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/top.html
-* https://tigercosmos.xyz/post/2020/04/unix/top-usage/#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99
+* [Linux top 命令 | 菜鸟教程 (runoob.com)](https://www.runoob.com/linux/linux-comm-top.html)
+* [linux top 參數及指令筆記 (j4.com.tw)](http://www.j4.com.tw/web-design/linux-top-參數及指令筆記/)
+* [8. top linux下的任务管理器 — Linux Tools Quick Tutorial (linuxtools-rst.readthedocs.io)](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/top.html)
+* [Neutrino's Blog: Unix/Linux TOP 指令使用詳解 (tigercosmos.xyz)](https://tigercosmos.xyz/post/2020/04/unix/top-usage/#參考資料)
 ## 相關指令
 * ps

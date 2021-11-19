@@ -135,8 +135,8 @@ s/regexp/replacement/[flags]
 ```
 
 ## 參考資料
-* https://www.gnu.org/software/sed/manual/sed.html
-* https://www.runoob.com/linux/linux-comm-sed.html
-* https://iter01.com/458869.html
-* https://terryl.in/zh/linux-sed-command/
-* https://shengyu7697.github.io/linux-sed/
+* [sed, a stream editor (gnu.org)](https://www.gnu.org/software/sed/manual/sed.html)
+* [Linux sed 命令 | 菜鸟教程 (runoob.com)](https://www.runoob.com/linux/linux-comm-sed.html)
+* [在 Linux 命令列中轉換大小寫 | IT人 (iter01.com)](https://iter01.com/458869.html)
+* [Linux 指令 SED 用法教學、取代範例、詳解 - TerryL](https://terryl.in/zh/linux-sed-command/)
+* [Linux sed 字串取代用法與範例 | ShengYu Talk (shengyu7697.github.io)](https://shengyu7697.github.io/linux-sed/)

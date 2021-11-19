@@ -61,6 +61,5 @@ last -t 20211026151111 root
 last 1 or last tty1
 ```
 ## 參考資料
-https://www.baeldung.com/linux/last-command
-
-https://iter01.com/255176.html
+* [Linux last Command | Baeldung on Linux](https://www.baeldung.com/linux/last-command)
+* [Linux基礎命令—last | IT人 (iter01.com)](https://iter01.com/255176.html)

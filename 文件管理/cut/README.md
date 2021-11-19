@@ -68,9 +68,9 @@ ps aux | grep python | sed 's/\s\+/ /g' | cut -d ' ' -f 2,11-
 ```
 
 ## 參考資料
-* https://blog.gtwang.org/linux/linux-cut-command-tutorial-and-examples/
-* https://www.opencli.com/linux/cut-command
-* https://linuxhint.com/bash-cut-command-examples/
+* [Linux 的 cut 擷取部份字元、欄位指令教學與常用範例整理 - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/linux-cut-command-tutorial-and-examples/)
+* [cut 指令: 擷取檔案每行指定範圍資料 (ltsplus.com)](https://www.ltsplus.com/linux/cut-command)
+* [Bash Cut Command with Examples (linuxhint.com)](https://linuxhint.com/bash-cut-command-examples/)
 ## 相關指令(可選)
 * sed
 * awk

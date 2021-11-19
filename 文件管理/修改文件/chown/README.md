@@ -69,5 +69,5 @@ chown --from=:root alan:alangroup file1
 
 
 ## 參考資料
-* https://blog.gtwang.org/linux/linux-chown-command-tutorial/
+* [Linux 更改檔案擁有者與群組，chown 指令使用教學與範例 - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/linux-chown-command-tutorial/)
 

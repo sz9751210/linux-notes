@@ -145,11 +145,9 @@ date -s "20161111 10:21:32"
 ```
 
 ## 參考資料
-https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/392531/
-
-https://man7.org/linux/man-pages/man1/date.1.html
-
-https://www.geeksforgeeks.org/date-command-linux-examples/
+* [Linux下date命令,格式化輸出,時間設定方法 | 程式前沿 (codertw.com)](https://codertw.com/前端開發/392531/)
+* [date(1) - Linux manual page (man7.org)](https://man7.org/linux/man-pages/man1/date.1.html)
+* [date command in Linux with examples - GeeksforGeeks](https://www.geeksforgeeks.org/date-command-linux-examples/)
 ## 相關指令
 * timedatectl
 * hwclock

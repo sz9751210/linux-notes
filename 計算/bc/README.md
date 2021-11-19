@@ -49,10 +49,10 @@ echo $ans
 ```
 
 ## 參考資料
-* https://man.linuxde.net/bc
-* https://blog.gtwang.org/linux/linux-bc-command-tutorial-examples/
-* https://www.runoob.com/linux/linux-comm-bc.html
-* https://www.cnblogs.com/machangwei-8/p/10388510.html
+* [bc命令_Linux bc 命令用法详解：算术操作精密运算工具 (linuxde.net)](https://man.linuxde.net/bc)
+* [Linux 計算機 bc 指令用法教學與範例 - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/linux-bc-command-tutorial-examples/)
+* [Linux bc 命令 | 菜鸟教程 (runoob.com)](https://www.runoob.com/linux/linux-comm-bc.html)
+* [bc命令详解 - 马昌伟 - 博客园 (cnblogs.com)](https://www.cnblogs.com/machangwei-8/p/10388510.html)
 ## 相關指令
 * calc
 * gcalccmd

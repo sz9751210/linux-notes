@@ -60,4 +60,4 @@ neofetch
 
 
 ## 參考資料
-https://github.com/dylanaraps/neofetch
+* [dylanaraps/neofetch: 🖼️ A command-line system information tool written in bash 3.2+ (github.com)](https://github.com/dylanaraps/neofetch)

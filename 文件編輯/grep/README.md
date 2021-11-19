@@ -126,6 +126,6 @@ grep -oP '2021:[0-2][0-9]:[0-5][0-9]'| sort  |  uniq -c
 
 
 ## 參考資料
-* http://linux.51yip.com/search/grep
-* https://man7.org/linux/man-pages/man1/grep.1.html
-* https://blog.gtwang.org/linux/linux-grep-command-tutorial-examples/
+* [grep linux 命令 在线中文手册 (51yip.com)](http://linux.51yip.com/search/grep)
+* [grep(1) - Linux manual page (man7.org)](https://man7.org/linux/man-pages/man1/grep.1.html)
+* [Linux 匹配文字 grep 指令用法教學與範例 - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/linux-grep-command-tutorial-examples/)

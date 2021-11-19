@@ -65,10 +65,10 @@ free -htw
 ```
 
 ## 參考資料
-* https://linuxize.com/post/free-command-in-linux/
-* https://blog.gtwang.org/linux/linux-cache-memory-linux/
-* https://xyz.cinc.biz/2016/06/linux-memory-used-free.html
-* https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/free.html
+* [Free Command in Linux | Linuxize](https://linuxize.com/post/free-command-in-linux/)
+* [Linux 的記憶體快取（Cache Memory）功能：Linux 系統把記憶體用光了？ - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/linux-cache-memory-linux/)
+* [XYZ的筆記本: Linux 記憶體使用量 used、free、buffers、cached (cinc.biz)](https://xyz.cinc.biz/2016/06/linux-memory-used-free.html)
+* [9. free 查询可用内存 — Linux Tools Quick Tutorial (linuxtools-rst.readthedocs.io)](https://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/free.html)
 ## 相關指令
 * df
 * top

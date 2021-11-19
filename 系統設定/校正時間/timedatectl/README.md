@@ -75,9 +75,9 @@ timedatectl set-timezone UTC
 
 
 ## 參考資料
-* http://manpages.ubuntu.com/manpages/bionic/zh_TW/man1/timedatectl.1.html
-* https://blog.gtwang.org/linux/howto-set-date-time-from-linux-command-prompt/
-* https://www.gushiciku.cn/pl/gxVn/zh-tw
+* [Ubuntu Manpage: timedatectl - 控制系統的時間與日期](http://manpages.ubuntu.com/manpages/bionic/zh_TW/man1/timedatectl.1.html)
+* [Linux 手動更改系統時間：date、hwclock 與 timedatectl 指令用法教學 - G. T. Wang (gtwang.org)](https://blog.gtwang.org/linux/howto-set-date-time-from-linux-command-prompt/)
+* [Linux下使用timedatectl命令時間時區操作詳解_osc_02985929 - MdEditor (gushiciku.cn)](https://www.gushiciku.cn/pl/gxVn/zh-tw)
 
 ## 相關指令
 * date

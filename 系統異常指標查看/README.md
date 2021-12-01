@@ -85,6 +85,14 @@ for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print "
 df -h
 ```
 
+2. du
+```shell
+du -shc /path/*
+
+du -h -x --max-depth=1
+```
+
+
 ## conn
 
 1. netstat
